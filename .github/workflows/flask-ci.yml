@@ -25,8 +25,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest
 
-      - name: Run Flask tests
+      - name: Run tests
         run: |
-          echo "No tests yet, just checking Flask app runs"
-          python -c "from app import app; print('Flask app imported successfully')"
+          pytest -v
+
